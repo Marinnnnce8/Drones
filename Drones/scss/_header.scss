@@ -1,0 +1,49 @@
+.header {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo {
+    float: left;
+    height: 100px;
+    line-height:140px; 
+}
+
+.header-links {
+    float: right;
+}
+
+.header-nav {
+    float: left;
+
+    ul {
+        height: 100px;
+        line-height: 150px;
+        li {
+            float: left;
+            margin-right: 27px;
+
+            a {
+                color: #fff;
+                font-size: 18px;
+                text-decoration: none; 
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.header-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    line-height: 40px;
+    margin-top: 55px;
+    width: 100px;
+}

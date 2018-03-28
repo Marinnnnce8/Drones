@@ -1,0 +1,49 @@
+.drone-boxes {
+    background: #f6f6f6;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+
+.boxes-wrap {
+    margin: 117px 0 90px 0;
+    width: 100%;
+}
+
+.drone-box {
+    display: inline-block;
+    text-align: center;
+    width: 18.2%;
+
+    &:not(:first-of-type){
+        margin-left: 6.3%;
+    }
+
+    img {
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: #5e6372;
+        font-size: 16px;
+        line-height: 30px; 
+    }
+}
+
+.blue-btn {
+    @extend %btn;
+    background: #274799;
+    border: none;
+    color: #fff;
+    display: block;
+    margin: 0 auto 100px auto;
+}
+
+h2 {
+    background: -webkit-linear-gradient(bottom left, #cc0333, #e06900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-weight: $bold;
+    margin-bottom: 8px;
+}

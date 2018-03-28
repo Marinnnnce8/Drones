@@ -1,0 +1,148 @@
+@mixin bp($point) {
+    @if $point == desktop {
+      @media only screen and (min-width:1025px)
+      { @content; }
+    }
+    @else if $point == tablet {
+      @media only screen and (min-width: 768px) and (max-width:1024px)
+      { @content; }
+    }
+    @else if $point == mobile {
+      @media only screen and (max-width: 767px) 
+      { @content; }
+    }
+  }
+
+@import 'reset';
+@import 'font';
+@import 'mdi';
+@import 'variables';
+@import 'header';
+@import 'boxes';
+@import 'video';
+@import 'info';
+@import 'contact';
+@import 'footer';
+
+* {
+    box-sizing: border-box;
+
+    &::before {
+        box-sizing: border-box;  
+    }
+    &::after {
+        box-sizing: border-box;  
+    }
+}
+
+body {
+    font-family: $font-default;
+}
+
+.wrapper {
+    // margin: 0 auto;
+    max-width: 1920px;
+    padding: 0 279px 0 299px;
+    width: 100%;
+}
+
+%btn {
+    border-radius: 25px;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    width: 205px;
+}
+
+.banner-sec {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1080px;
+    position: relative;
+}
+
+.banner-box {
+    left: 50%;
+    position: absolute;
+    top: 62%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 3;
+
+    p {
+        color: #ea7948;
+        font-size: 16px;
+        line-height: 30px;
+        
+        &:not(:first-of-type) {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+h1 {
+    color: #fff;
+    font-size: 44px;
+    font-weight: $bold;
+    margin-bottom: 12px;
+}
+
+.white-btn {
+    @extend %btn;
+    background: #fff;
+    border: none;
+    color: #d95552;
+    margin-right: 20px;
+}
+
+.video-btn {
+    @extend %btn;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    position: relative;
+}
+
+.zmdi-caret-right {
+    font-size: 34px;
+    left: 35px;
+    position: absolute;
+    top: 8px;
+}
+
+.scroll-box {
+    text-align: center;
+    margin-top: 385px;
+}
+
+.scroll-btn {
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 43px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 25px;
+}
+
+.btn-dot {
+    background: #b60c17;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 7px;
+    left: 44%;
+    position: absolute;
+    top: 7px;
+    width: 4px;
+}
+
+.scroll-txt {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 10px;
+}
+
+
